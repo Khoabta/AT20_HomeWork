@@ -3,8 +3,9 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class setUpBrowser {
+public class HomeWork_D6 {
 
     static WebDriver driver;
     public static void main(String[] args) throws InterruptedException {
@@ -19,6 +20,10 @@ public class setUpBrowser {
             case "MicrosoftEdge":
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
+                break;
+            case "Firefox":
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
                 break;
             default:
                 throw new IllegalStateException("invalid browser" + browser);
